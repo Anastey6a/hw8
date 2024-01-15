@@ -1,45 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Table</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 50%;
-      margin: 20px auto;
-    }
-
-    table, th, td {
-      border: 1px solid black;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-
 <script>
-    // Створюємо таблицю та отримуємо посилання на body документа
-    let table = document.createElement('table');
-    let body = document.getElementsByTagName('body')[0];
+        const Input1 = prompt("Введіть перший рядок:");
+        const Input2 = prompt("Введіть другий рядок:");
+        const Input3 = prompt("Введіть третій рядок:");
 
-    // Заповнюємо таблицю числами від 1 до 100
-    for (let i = 1; i <= 10; i++) {
-        let row = table.insertRow();
-        for (let j = 1; j <= 10; j++) {
-            let cell = row.insertCell();
-            cell.textContent = (i - 1) * 10 + j;
-        }
-    }
+        const concatenatedString = Input1 + Input2 + Input3;
+        console.log("Результат конкатенації:", concatenatedString);
 
-    // Додаємо таблицю до body документа
-    body.appendChild(table);
+    
+        const fiveDigitNumber = prompt("Введіть п'ятизначне число:");
+        const digitsArray = Array.from(String(fiveDigitNumber), Number);
+        console.log("Цифри п'ятизначного числа:", digitsArray.join(" "));
 </script>
-
+<body>
+    
 </body>
 </html>
